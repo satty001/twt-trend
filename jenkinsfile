@@ -1,0 +1,13 @@
+pipeline {
+    agent {
+        label 'maven'
+    }
+
+    stages {
+        stage('clone-code') {
+            steps {
+                git branch: 'sat', url: 'https://github.com/satty001/tweet-trend.git'
+            }
+        }
+    }
+}
