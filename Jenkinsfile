@@ -13,7 +13,7 @@ environment{
                 sh "mvn clean deploy"
             }
         }
-        
+
         stage('SonarQube analysis') {
         environment {
             scannerHome = tool 'satty-sonar-scanner'
