@@ -1,5 +1,5 @@
 def registry = 'https://satty.jfrog.io/'
-def imageName = 'valaxy01.jfrog.io/satty-docker-local/ttrend'
+def imageName = 'satty.jfrog.io/satty-docker-local/ttrend'
 def version   = '2.1.4'
 
 pipeline {
