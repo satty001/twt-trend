@@ -101,5 +101,13 @@ environment{
                 }
             }
         }
+
+        stage ("Deploy") {
+            steps {
+                script {
+                    sh './deply.sh'
+                }
+            }
+        }
     }
 }
