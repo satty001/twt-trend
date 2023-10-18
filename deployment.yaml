@@ -17,7 +17,7 @@ spec:
       - name: jfrogcred
       containers:
       - name:  satty-rtp
-        image: satty.jfrog.io/satty-docker/ttrend:2.1.4
+        image: satty.jfrog.io/satty-docker/ttrend:2.1.5
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
