@@ -93,11 +93,11 @@ environment{
         stage (" Docker Publish "){
             steps {
                 script {
-                echo '<--------------- Docker Publish Started --------------->'  
+                    echo '<--------------- Docker Publish Started --------------->'  
                     docker.withRegistry(registry, 'artifact-cred'){
                         app.push()
                     }    
-                echo '<--------------- Docker Publish Ended --------------->'  
+                    echo '<--------------- Docker Publish Ended --------------->'  
                 }
             }
         }
@@ -105,7 +105,9 @@ environment{
         stage ("Deploy") {
             steps {
                 script {
-                    sh './deploy.sh'
+                    echo '<--------------- HELM Deploy Started --------------->'
+                    sh 'helm install ttrend ttrend-0.1.0.tgz'
+                    echo '<--------------- HELM Deploy Ended --------------->'
                 }
             }
         }
